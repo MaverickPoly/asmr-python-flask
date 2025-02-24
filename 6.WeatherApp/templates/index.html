@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather app - Flask</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Weather App</h1>
+        <form action="/weather" method="post" class="mt-4">
+            <div class="mb-3">
+                <label for="city" class="form-label">Enter city name:</label>
+                <input type="text" id="city" name="city" class="form-control" placeholder="City name" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Get Weather
+            </button>
+        </form>
+
+        {% if error %}
+        <div class="alert alert-danger mt-4">
+            {{error}}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

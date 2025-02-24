@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - Flask{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="heading">Register</h1>
+    <form method="POST">
+        <div class="formField">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Email" />
+        </div>
+        <div class="formField">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" placeholder="Username" />
+        </div>
+        <div class="formField">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Password" />
+        </div>
+        <div class="formField">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" type="password" name="confirm_password" placeholder="Confirm Password" />
+        </div>
+        <button type="submit" class="btn">
+            Register
+        </button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Chat Room</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label for="username" class="form-label">Enter your username:</label>
+        <input type="text" name="username" class="form-control" id="username" required />
+    </div>
+    <button class="btn btn-primary" type="submit">
+        Set Username
+    </button>
+</form>
+{% endblock %}

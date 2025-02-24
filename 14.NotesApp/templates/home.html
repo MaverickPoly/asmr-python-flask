@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}All Notes{% endblock %}
+
+{% block content %}
+<section class="notes-list">
+    <h1 class="heading">Notes</h1>
+    <div class="container">
+        {% for note in notes %}
+        <div class="card">
+            <div class="content">
+                <h2 class="title">{{note.title}}</h2>
+                <p class="description">{{note.description}}</p>
+                <p class="date">{{note.created_at.strftime("%Y-%m-%d")}}</p>
+            </div>
+            <button class="btn" onclick="deleteNote({{note.id}})">
+                Delete
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+<nav>
+    <a class="logoContainer" href="{{ url_for('blogs.blogs_list') }}">Blogs app</a>
+    <ul>
+       {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('blogs.blogs_list') }}">Blogs</a></li>
+        <li><a href="{{ url_for('blogs.upload_blog') }}">Upload Blog</a></li>
+        <li><a href="{{ url_for('auth.profile') }}">Profile</a></li>
+        {% else %}
+        <li><a href="{{ url_for('blogs.blogs_list') }}">Blogs</a></li>
+        <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+        <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+       {% endif %}
+    </ul>
+    <div></div>
+</nav>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class="flashes">
+    {% for category, message in messages %}
+    <li class="flash flash-{{ category }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<div class="block">
+    {% block content %}
+    {% endblock %}
+</div>
+<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Flask{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="heading">Login to your account</h1>
+    <form method="POST">
+        <div class="formField">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Email" />
+        </div>
+        <div class="formField">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Password" />
+        </div>
+        <button type="submit" class="btn">
+            Login
+        </button>
+    </form>
+</section>
+{% endblock %}

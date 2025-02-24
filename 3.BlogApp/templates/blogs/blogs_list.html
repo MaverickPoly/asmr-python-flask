@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Blogs List{% endblock %}
+
+{% block content %}
+<section class="section blogs_list">
+    <h2 class="heading">Blog posts</h2>
+    <div class="container">
+        {% for blog in blogs %}
+        <div class="card">
+            <img
+                src="{{ url_for('static', filename='uploads/' + blog.image) }}"
+                alt="{{ blog.title}}"
+                class="img"/>
+            <div class="card-content">
+                <h2>{{ blog.title }}</h2>
+                <p>{{ blog.content }}</p>
+                <!--<p class="meta">Posted by: {{ blog.user.username }} on {{ blog.created_at }}</p>-->
+                <p class="desc">Posted by: {{ blog.user.username }} on {{ blog.created_at.strftime("%d-%m-%Y") }}</p>
+                {% if blog.user.id == current_user.id %}
+                    <button onclick="deleteBlog({{blog.id}})" class="btn btn-outline red">Delete</button>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

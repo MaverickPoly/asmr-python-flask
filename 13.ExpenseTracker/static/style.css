@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1 {
+  margin: 20px 0;
+}
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: teal;
+}
+form {
+  margin: 20px auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+button {
+  padding: 10px;
+  background: teal;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+button:hover {
+  background: rgb(0, 105, 105);
+}

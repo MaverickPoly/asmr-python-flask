@@ -1,0 +1,113 @@
+.dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.dialog.active {
+  display: flex;
+}
+.dialog-box {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  width: 260px;
+}
+.dialog-box h2 {
+  margin-bottom: 12px;
+}
+input {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  border: none;
+  background: #fff;
+  font-size: 15px;
+}
+.dialog-box .btns {
+  display: flex;
+  gap: 8px;
+}
+.dialog-box .btn {
+  margin-top: 10px;
+  padding: 8px;
+  cursor: pointer;
+  flex: 1;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.info .btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  background: rgb(0, 115, 255);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.info .btn:hover {
+  background: rgb(0, 92, 204);
+}
+
+.container {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 70%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+.box .names {
+  display: flex;
+  gap: 12px;
+}
+
+.names h3 {
+  font-size: 18px;
+  color: rgb(67, 67, 67);
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.controls h3 {
+  font-size: 19px;
+  font-weight: 500;
+}
+.controls .btn {
+  padding: 6px 14px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  background: red;
+  color: white;
+  border-radius: 8px;
+}
+.controls .btn#edit {
+  background: green;
+}

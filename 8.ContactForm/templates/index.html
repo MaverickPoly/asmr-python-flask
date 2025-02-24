@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+      <li class="flash">{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+
+    <form method="POST" class="container">
+      <h2 class="title">Contact Form</h2>
+      <p>Fill in the form below to send email messages to any email address.</p>
+      <div class="box">
+        <label for="sender_email">Sender Email</label>
+        <input
+          type="email"
+          id="sender_email"
+          name="sender_email"
+          placeholder="Sender Email"
+        />
+      </div>
+      <div class="box">
+        <label for="receiver_email">Receiver Email</label>
+        <input
+          type="email"
+          id="receiver_email"
+          name="receiver_email"
+          placeholder="Receiver Email"
+        />
+      </div>
+      <div class="box">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="box">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" />
+      </div>
+      <div class="box">
+        <label for="body">Body</label>
+        <textarea
+          id="body"
+          name="body"
+          placeholder="Body..."
+          style="resize: none"
+          rows="12"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn">Send Email</button>
+    </form>
+  </body>
+</html>

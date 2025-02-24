@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, max-scale=1.0"
+    />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="field" />
+      <div class="buttons">
+        <button class="delete" onclick="clearField()">C</button>
+        <button class="delete" onclick="deleteField()">D</button>
+        <button class="operation" onclick="percent()">%</button>
+        <button class="operation" onclick="addChar('+')">+</button>
+
+        <button class="number" onclick="addChar('7')">7</button>
+        <button class="number" onclick="addChar('8')">8</button>
+        <button class="number" onclick="addChar('9')">9</button>
+        <button class="operation" onclick="addChar('-')">-</button>
+
+        <button class="number" onclick="addChar('4')">4</button>
+        <button class="number" onclick="addChar('5')">5</button>
+        <button class="number" onclick="addChar('6')">6</button>
+        <button class="operation" onclick="addChar('*')">✕</button>
+
+        <button class="number" onclick="addChar('1')">1</button>
+        <button class="number" onclick="addChar('2')">2</button>
+        <button class="number" onclick="addChar('3')">3</button>
+        <button class="operation" onclick="addChar('/')">÷</button>
+
+        <button class="number" onclick="addChar('0')">0</button>
+        <button class="evaluate" onclick="calculateField()">=</button>
+        <button class="number" onclick="addChar('.')">.</button>
+      </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>

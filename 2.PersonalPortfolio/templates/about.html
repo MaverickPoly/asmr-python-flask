@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title%}About{% endblock %}
+
+{% block content %}
+<h1 class="heading-fill">About Altaire Tech</h1>
+<div class="container">
+    <img src={{url_for("static", filename="images/brain_logo.jpg")}}>
+
+    <div>
+        <h2>
+           Lets develop brains!
+        </h2>
+        <p>
+            AltaireTech is a young and innovative tech company focused on developing cutting-edge solutions for the future. Our mission is to create a platform that empowers people to learn, grow, and innovate. We strive to create a safe, supportive, and inclusive environment where everyone feels welcome and encouraged to learn and grow.
+            We are constantly looking for talented individuals who are passionate about technology, creativity, and problem-solving. If you're interested in joining us, please don't hesitate to reach out to us at <a href="mailto:altairetech@gmail.com">altairetech@gmail.com</a>.
+            We're excited to have you on board!
+        </p>
+        <h2>
+            Connect with AltaireTech!
+        </h2>
+    </div>
+</div>
+
+{% endblock %}

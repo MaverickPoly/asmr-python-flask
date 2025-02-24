@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Create new Note{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="heading">Create new Note</h1>
+    <form method="POST">
+        <div class="formField">
+            <label for="title">Title</label>
+            <input id="title" type="text" name="title" placeholder="Title" />
+        </div>
+        <div class="formField">
+            <label for="description">Description</label>
+            <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Description"
+                    style="resize: none"
+                    rows="10"
+            >
+            </textarea>
+        </div>
+        <button type="submit" class="btn">
+            Create
+        </button>
+    </form>
+</section>
+{% endblock %}

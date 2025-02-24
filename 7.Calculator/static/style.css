@@ -1,0 +1,71 @@
+body {
+  background: #333;
+  font-family: Arial, sans-serif;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.calculator {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  padding: 26px;
+  background: #555;
+}
+.field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 28px;
+  background: #eee;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+button {
+  font-size: 28px;
+  border-radius: 20px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: white;
+  height: 70px;
+}
+
+button.delete {
+  background: red;
+}
+button.delete:hover {
+  background: rgb(201, 0, 0);
+}
+
+button.operation {
+  background: rgb(0, 106, 255);
+}
+button.operation:hover {
+  background: rgb(0, 80, 192);
+}
+
+button.number {
+  background: gray;
+}
+button.number:hover {
+  background: rgb(95, 95, 95);
+}
+
+button.evaluate {
+  background: orange;
+}
+button.evaluate:hover {
+  background: rgb(197, 128, 0);
+}

@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style: none;
+}
+.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 30px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #002fb6;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 30px;
+}
+.nav ul li a {
+    color: #333;
+    font-size: 18px;
+}
+.nav ul li a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+section {
+    min-height: 90vh;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notes-list {
+    justify-content: start;
+}
+
+.heading {
+    color: transparent;
+    background: linear-gradient(to right, #0009c2, #0090ff);
+    background-clip: text;
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form {
+    background: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #bbb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px;
+    max-width: 500px;
+}
+.formField {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+form label {
+    font-size: 18px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+form input:focus, form textarea:focus {
+    outline: 1px solid #004cff;
+}
+.btn {
+    background: #0077ff;
+    padding: 8px 18px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 106, 255, 0.1);
+    transition: box-shadow 0.3s;
+}
+.btn:hover {
+/*    background: #0090ff;*/
+    box-shadow: 0 4px 12px rgba(0, 106, 255, 0.5);
+}
+
+.flashes {
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    flex-direction: column;
+    gap: 14px;
+}
+.flash {
+    background: #f4f4f4;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 17px;
+    overflow: hidden;
+}
+.flash-success {
+    border-left: 16px solid green;
+}
+.flash-error {
+    border-left: 16px solid red;
+}
+.flash-message, .flash-info {
+    border-left: 16px solid blue;
+}
+
+.container {
+    disply: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+.card {
+    background: #f4f4f4;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card .content {
+    flex: 1;
+    gap: 8px;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.card .date {
+    color: #444;
+    font-size: 14px;
+}
+.card .date::before {
+    content: "Created at: ";
+}
+.card .description {
+    font-size: 15px;
+}

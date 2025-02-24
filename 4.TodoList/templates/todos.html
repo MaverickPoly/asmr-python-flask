@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block title %}Todos{% endblock %}
+
+<!--  -->
+{% block content %}
+<section class="section">
+  <form method="POST">
+    <input type="text" name="title" placeholder="Todo title..." />
+    <button type="submit" class="btn">Create</button>
+  </form>
+  <div class="container">
+    <h1>Todos</h1>
+    {% for todo in todos %}
+    <div class="todo-tile {{'green' if todo.completed else 'red'}}">
+      <h3 class="title">{{ todo.title }}</h3>
+      <p>Created at: {{ todo.created_at.strftime('%d-%m-%Y %H:%M') }}</p>
+      <input
+        type="checkbox"
+        {% if todo.completed %}checked{% endif %}
+        onchange="updateTodoStatus({{todo.id}}, this.checked)"
+      />
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

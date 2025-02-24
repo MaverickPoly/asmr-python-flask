@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="mb-4">Your Tasks</h1>
+<a href="{{ url_for('add_task') }}" class="btn btn-primary mb-3">Add new Task</a>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Deadline</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in tasks %}
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.deadline.strftime('%Y-%m-%d') if task.deadline else 'N/A' }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ "Completed" if task.completed else "Pending" }}</td>
+        <td>
+          <a
+            href="{{url_for('complete_task', task_id=task.id)}}"
+            class="btn btn-sm btn-success"
+          >
+            {{"Undo" if task.completed else "Complete"}}
+          </a>
+          <a
+            href="{{url_for('delete_task', task_id=task.id)}}"
+            class="btn btn-sm btn-danger"
+          >
+            Delete
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
