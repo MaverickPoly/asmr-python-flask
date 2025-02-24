@@ -1,6 +1,6 @@
 # ASMR Python Flask: Projects from Beginner to Intermediate
 
-Welcome to the **Flask Projects Repository**! 🚀 This collection contains **15 beginner-to-intermediate-level projects** created using the Flask framework and Python. This projects are well suited for beginners and advanced programmers at the same time. Explore each project, learn, and have fun coding with me!! 😎
+Welcome to the **Flask Projects Repository**! 🚀 This collection contains **15 beginner-to-intermediate-level projects** created using the Flask framework and Python. This projects are well suited for beginners and advanced programmers at the same time. Explore each project, learn, and have fun coding with me! 😎
 
 ---
 
